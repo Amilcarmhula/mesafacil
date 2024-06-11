@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Seridor do sistema mesafacil, o assistente de pedidos e visualizador de menus para restaurantes e APi do Cliente e do backoffice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "cross-env PORT=3002 npm start --prefix client",
+    "backoffice": "cross-env PORT=3001 npm start --prefix backoffice",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run backoffice\""
+  },
+  "keywords": [
+    "mesafacil",
+    "aks_api"
+  ],
+  "author": "JM-Tecnologias",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1",
+    "qrcode": "^1.5.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.3"
+  }
+}
